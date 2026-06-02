@@ -38,7 +38,7 @@ export default function Home() {
             </motion.h1>
             
             <motion.p variants={fadeInUp} className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto leading-relaxed">
-              Aerukart is a full-service digital agency building premium websites, apps, and software to help you dominate your market. Stop being invisible online.
+              Pathway is a full-service digital agency building premium websites, apps, and software to help you dominate your market. Stop being invisible online.
             </motion.p>
             
             <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -200,12 +200,12 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                quote: "Aerukart completely transformed our restaurant's online presence. Our online reservations went up by 340% in the first two months.",
+                quote: "Pathway completely transformed our restaurant's online presence. We started getting consistent online reservations within the first few weeks.",
                 author: "Sarah Jenkins",
                 role: "Owner, The Rustic Table"
               },
               {
-                quote: "We needed a complex web app built fast for our startup. The team at Aerukart delivered a premium product ahead of schedule.",
+                quote: "We needed a complex web app built fast for our startup. The team at Pathway delivered a premium product ahead of schedule.",
                 author: "Marcus Chen",
                 role: "Founder, TechFlow"
               },

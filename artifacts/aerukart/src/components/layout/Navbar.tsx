@@ -40,7 +40,7 @@ export function Navbar() {
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
             <span className="font-display font-bold text-2xl tracking-tight text-foreground">
-              Aerukart<span className="text-accent">.</span>
+              Pathway<span className="text-accent">.</span>
             </span>
           </Link>
 

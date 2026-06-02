@@ -37,7 +37,7 @@ export default function Contact() {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
+  function onSubmit(_values: z.infer<typeof formSchema>) {
     toast({
       title: "Message sent successfully!",
       description: "We'll get back to you within 24 hours.",
@@ -56,7 +56,7 @@ export default function Contact() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-24">
-          
+
           {/* Contact Info */}
           <div className="lg:col-span-2 space-y-10">
             <div>
@@ -68,18 +68,18 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-semibold mb-1">Email Us</h4>
-                    <p className="text-muted-foreground">hello@aerukart.com</p>
-                    <p className="text-muted-foreground">support@aerukart.com</p>
+                    <p className="text-muted-foreground">hello@pathway.studio</p>
+                    <p className="text-muted-foreground">support@pathway.studio</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center text-accent shrink-0">
                     <Phone className="w-5 h-5" />
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-1">Call Us</h4>
-                    <p className="text-muted-foreground">+1 (555) 123-4567</p>
+                    <h4 className="font-semibold mb-1">Call / WhatsApp</h4>
+                    <p className="text-muted-foreground">+91 9542758814</p>
                   </div>
                 </div>
 
@@ -88,18 +88,18 @@ export default function Contact() {
                     <MapPin className="w-5 h-5" />
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-1">Visit Us</h4>
-                    <p className="text-muted-foreground">123 Innovation Drive<br />Tech District<br />San Francisco, CA 94103</p>
+                    <h4 className="font-semibold mb-1">Location</h4>
+                    <p className="text-muted-foreground">Hyderabad, India</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center text-accent shrink-0">
                     <Clock className="w-5 h-5" />
                   </div>
                   <div>
                     <h4 className="font-semibold mb-1">Office Hours</h4>
-                    <p className="text-muted-foreground">Mon-Fri: 9:00 AM - 6:00 PM<br />Weekend: Closed</p>
+                    <p className="text-muted-foreground">Mon–Fri: 9:00 AM – 6:00 PM IST<br />Weekend: By appointment</p>
                   </div>
                 </div>
               </div>
@@ -107,12 +107,12 @@ export default function Contact() {
 
             <div className="pt-8 border-t border-border">
               <h3 className="text-xl font-bold mb-4">Need an immediate response?</h3>
-              <Button 
-                asChild 
-                size="lg" 
+              <Button
+                asChild
+                size="lg"
                 className="w-full bg-[#25D366] hover:bg-[#128C7E] text-white rounded-xl h-14 text-base"
               >
-                <a href="https://wa.me/+919876543210" target="_blank" rel="noreferrer">
+                <a href="https://wa.me/919542758814" target="_blank" rel="noreferrer">
                   <MessageSquare className="w-5 h-5 mr-2" />
                   Chat on WhatsApp
                 </a>
@@ -124,7 +124,7 @@ export default function Contact() {
           <div className="lg:col-span-3">
             <div className="bg-card border border-border p-8 md:p-10 rounded-3xl shadow-xl">
               <h3 className="text-2xl font-bold font-display mb-8">Book a Free Consultation</h3>
-              
+
               <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -135,7 +135,7 @@ export default function Contact() {
                         <FormItem>
                           <FormLabel>Full Name</FormLabel>
                           <FormControl>
-                            <Input placeholder="John Doe" className="bg-background h-12" {...field} />
+                            <Input placeholder="Your name" className="bg-background h-12" {...field} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -148,7 +148,7 @@ export default function Contact() {
                         <FormItem>
                           <FormLabel>Phone Number</FormLabel>
                           <FormControl>
-                            <Input placeholder="+1 (555) 000-0000" className="bg-background h-12" {...field} />
+                            <Input placeholder="+91 XXXXX XXXXX" className="bg-background h-12" {...field} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -163,7 +163,7 @@ export default function Contact() {
                       <FormItem>
                         <FormLabel>Email Address</FormLabel>
                         <FormControl>
-                          <Input placeholder="john@company.com" className="bg-background h-12" {...field} />
+                          <Input placeholder="you@company.com" className="bg-background h-12" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -188,6 +188,8 @@ export default function Contact() {
                             <SelectItem value="webapp">Web Application</SelectItem>
                             <SelectItem value="mobileapp">Mobile Application</SelectItem>
                             <SelectItem value="seo">SEO Optimization</SelectItem>
+                            <SelectItem value="automation">Business Automation</SelectItem>
+                            <SelectItem value="ai">AI-Powered Solutions</SelectItem>
                             <SelectItem value="other">Other / Not Sure</SelectItem>
                           </SelectContent>
                         </Select>
@@ -203,10 +205,10 @@ export default function Contact() {
                       <FormItem>
                         <FormLabel>Project Details</FormLabel>
                         <FormControl>
-                          <Textarea 
-                            placeholder="Tell us about your business and what you're looking to achieve..." 
-                            className="min-h-[120px] bg-background resize-none" 
-                            {...field} 
+                          <Textarea
+                            placeholder="Tell us about your business and what you're looking to achieve..."
+                            className="min-h-[120px] bg-background resize-none"
+                            {...field}
                           />
                         </FormControl>
                         <FormMessage />

@@ -6,7 +6,7 @@ import { ReactNode } from "react";
 
 export function Layout({ children }: { children: ReactNode }) {
   return (
-    <ThemeProvider defaultTheme="dark" storageKey="aerukart-theme">
+    <ThemeProvider defaultTheme="dark" storageKey="pathway-theme">
       <div className="min-h-screen bg-background text-foreground font-sans selection:bg-accent selection:text-white flex flex-col">
         <Navbar />
         <main className="flex-1">
