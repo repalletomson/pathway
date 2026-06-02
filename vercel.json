@@ -1,7 +1,8 @@
 {
-  "buildCommand": "pnpm --filter @workspace/aerukart run build",
-  "outputDirectory": "artifacts/aerukart/dist",
-  "installCommand": "pnpm install",
+  "version": 2,
   "framework": null,
+  "buildCommand": "pnpm --filter @workspace/aerukart run build && cp -r artifacts/aerukart/dist ./dist",
+  "installCommand": "pnpm install",
+  "outputDirectory": "dist",
   "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
 }
