@@ -2,6 +2,8 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink } from "lucide-react";
+import kotayyaImg from "@/assets/images/kotayya-carts.jpg";
+import morineBakeryImg from "@/assets/images/morine-bakery.png";
 import ringendsolutionsImg from "@/assets/images/ringendsolutions.png";
 import studyforgeImg from "@/assets/images/studyforge.png";
 import socialzImg from "@/assets/images/socialz.png";
@@ -9,6 +11,26 @@ import skbuildersImg from "@/assets/images/skbuilders.png";
 import kidshomeImg from "@/assets/images/kidshome.png";
 
 const projects = [
+  {
+    id: 0,
+    title: "Kotayya Carts",
+    category: "Websites",
+    client: "Handcrafted Furniture Brand",
+    image: kotayyaImg,
+    link: "https://kotayya-carts.vercel.app/",
+    challenge: "A traditional artisan brand selling handcrafted bullock cart furniture needed a premium e-commerce presence that matched the richness and soul of their craft.",
+    solution: "A warm, story-driven e-commerce website showcasing teak wood collections, artisan craftsmanship, and traditional bullock cart motifs — built to convert visitors into proud owners of heirloom furniture.",
+  },
+  {
+    id: -1,
+    title: "Morine Bakery",
+    category: "Websites",
+    client: "Premium Bakery",
+    image: morineBakeryImg,
+    link: "#",
+    challenge: "A beloved Hyderabad bakery with 50+ years of legacy had an outdated online presence that didn't reflect their premium, crafted-with-love brand experience.",
+    solution: "A complete website redesign with a luxurious dark-gold aesthetic, full menu showcasing cakes, pastries, breads, and desserts, and a strong brand narrative celebrating five decades of deliciousness.",
+  },
   {
     id: 1,
     title: "Ringendsolutions",

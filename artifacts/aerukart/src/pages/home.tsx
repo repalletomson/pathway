@@ -5,9 +5,9 @@ import { Link } from "wouter";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import heroDashboard from "@/assets/images/hero-dashboard.png";
 import mobileApp from "@/assets/images/mobile-app.png";
+import kotayyaImg from "@/assets/images/kotayya-carts.jpg";
+import morineBakeryImg from "@/assets/images/morine-bakery.png";
 import ringendsolutionsImg from "@/assets/images/ringendsolutions.png";
-import studyforgeImg from "@/assets/images/studyforge.png";
-import socialzImg from "@/assets/images/socialz.png";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -214,28 +214,28 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
+                title: "Kotayya Carts",
+                category: "Website",
+                client: "Handcrafted Furniture Brand",
+                image: kotayyaImg,
+                link: "https://kotayya-carts.vercel.app/",
+                desc: "A warm, story-driven e-commerce website for a traditional artisan brand — handcrafted bullock cart furniture made from ethically sourced teak wood by master woodworkers.",
+              },
+              {
+                title: "Morine Bakery",
+                category: "Website",
+                client: "Premium Bakery",
+                image: morineBakeryImg,
+                link: "#",
+                desc: "A luxurious website redesign for Hyderabad's most coveted bakery — 50+ years of legacy brought online with a rich dark-gold aesthetic and a full menu experience.",
+              },
+              {
                 title: "Ringendsolutions",
                 category: "Website",
                 client: "Dubai Services Company",
                 image: ringendsolutionsImg,
                 link: "https://www.ringendsolutions.com/",
                 desc: "A sleek, professional services website for a Dubai-based multi-service company with clear service categorization and client inquiry flows.",
-              },
-              {
-                title: "StudyForge",
-                category: "Web App",
-                client: "EdTech Platform",
-                image: studyforgeImg,
-                link: "https://study-forge-gold.vercel.app/",
-                desc: "A headless education CMS with a visual program builder, chapter sequencing, and role-based access for instructors and admins.",
-              },
-              {
-                title: "Socialz",
-                category: "Mobile App",
-                client: "GenZ Social Platform",
-                image: socialzImg,
-                link: "https://play.google.com/store/apps/details?id=com.vinoothna.mycareerpath",
-                desc: "A GenZ-first social app for college students featuring interest-based chat, anonymous posting, and a streak-based spotlight system.",
               },
             ].map((project, i) => (
               <motion.a
