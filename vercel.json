@@ -1,7 +1,7 @@
 {
   "version": 2,
   "framework": null,
-  "buildCommand": "pnpm --filter @workspace/aerukart run build && cp -r artifacts/aerukart/dist ./dist",
+  "buildCommand": "pnpm --filter @workspace/aerukart run build && cp -r /vercel/path0/artifacts/aerukart/dist /vercel/path0/dist",
   "installCommand": "pnpm install",
   "outputDirectory": "dist",
   "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
