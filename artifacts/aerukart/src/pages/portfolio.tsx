@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, TrendingUp } from "lucide-react";
 import kotayyaImg from "@/assets/images/kotayya-carts.jpg";
 import morineBakeryImg from "@/assets/images/morine-bakery.png";
 import ringendsolutionsImg from "@/assets/images/ringendsolutions.png";
@@ -60,6 +60,7 @@ const projects = [
     link: "https://play.google.com/store/apps/details?id=com.vinoothna.mycareerpath&pcampaignid=web_share",
     challenge: "College students lacked a dedicated space to connect with peers who share the same interests — gaming, memes, placements, and everyday campus life.",
     solution: "A GenZ-first social app featuring interest-based chat, anonymous posting, student spaces for events and fests, and a streak-based spotlight system to reward engagement.",
+    highlight: "Live on Play Store — 100+ downloads",
   },
   {
     id: 4,
@@ -191,6 +192,12 @@ export default function Portfolio() {
                       <h4 className="text-sm font-bold uppercase tracking-wider text-muted-foreground mb-2">The Solution</h4>
                       <p className="text-foreground">{project.solution}</p>
                     </div>
+                    {"highlight" in project && project.highlight && (
+                      <div className="flex items-center gap-2 mt-2 px-4 py-3 rounded-xl bg-green-500/10 border border-green-500/30">
+                        <TrendingUp className="w-4 h-4 text-green-500 shrink-0" />
+                        <span className="text-green-500 font-semibold text-sm">{(project as typeof project & { highlight: string }).highlight}</span>
+                      </div>
+                    )}
                   </div>
 
                   <a
