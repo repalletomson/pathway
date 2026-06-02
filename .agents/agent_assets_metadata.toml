@@ -24,3 +24,33 @@ id = "wHeW9IEosp9ALnOWG9pHI"
 uri = "file://artifacts/aerukart/src/assets/images/restaurant-mockup.png"
 type = "image"
 title = "Restaurant website mockup"
+
+[[generated]]
+id = "qZRbjhpMs-9c4g5rna2co"
+uri = "file://attached_assets/generated_images/professional_website_screenshot_mockup_249b.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "ul30mfl4qDaumcicf52Lb"
+uri = "file://attached_assets/generated_images/studyforge_education_lms_platform_2c95.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "s-vsIw3MjMF39U_bpcz4F"
+uri = "file://attached_assets/generated_images/sk_builders_construction_company_54fc.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "6XALY7VVfVh0B839A4f5C"
+uri = "file://attached_assets/generated_images/socialz_college_social_app_86cb.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "FfZGDZG_aqHs4WkCk3ftn"
+uri = "file://attached_assets/generated_images/kids_home_play_school_ef1e.png"
+type = "image"
+title = "generated_image"

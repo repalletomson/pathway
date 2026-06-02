@@ -14,7 +14,17 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { useToast } from "@/hooks/use-toast";
+
+const serviceLabels: Record<string, string> = {
+  website: "Custom Website",
+  ecommerce: "E-commerce",
+  webapp: "Web Application",
+  mobileapp: "Mobile Application",
+  seo: "SEO Optimization",
+  automation: "Business Automation",
+  ai: "AI-Powered Solutions",
+  other: "Other / Not Sure",
+};
 
 const formSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
@@ -25,8 +35,6 @@ const formSchema = z.object({
 });
 
 export default function Contact() {
-  const { toast } = useToast();
-
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -37,12 +45,21 @@ export default function Contact() {
     },
   });
 
-  function onSubmit(_values: z.infer<typeof formSchema>) {
-    toast({
-      title: "Message sent successfully!",
-      description: "We'll get back to you within 24 hours.",
-    });
-    form.reset();
+  function onSubmit(values: z.infer<typeof formSchema>) {
+    const serviceLabel = serviceLabels[values.service] ?? values.service;
+    const text = [
+      `Hi Pathway! I'd like to get in touch.`,
+      ``,
+      `Name: ${values.name}`,
+      `Email: ${values.email}`,
+      `Phone: ${values.phone}`,
+      `Service: ${serviceLabel}`,
+      ``,
+      `Message: ${values.message}`,
+    ].join("\n");
+
+    const whatsappUrl = `https://wa.me/919542758814?text=${encodeURIComponent(text)}`;
+    window.open(whatsappUrl, "_blank", "noreferrer");
   }
 
   return (
@@ -51,7 +68,7 @@ export default function Contact() {
         <div className="mb-16">
           <h1 className="text-4xl md:text-6xl font-display font-bold mb-6">Let's Build Something Great</h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl">
-            Ready to upgrade your digital presence? Fill out the form below or reach out to us directly. We're excited to hear about your project.
+            Ready to upgrade your digital presence? Fill out the form below and we'll open WhatsApp so you can send it directly — no delays.
           </p>
         </div>
 
@@ -112,7 +129,7 @@ export default function Contact() {
                 size="lg"
                 className="w-full bg-[#25D366] hover:bg-[#128C7E] text-white rounded-xl h-14 text-base"
               >
-                <a href="https://wa.me/919542758814" target="_blank" rel="noreferrer">
+                <a href="https://wa.me/919542758814" target="_blank" rel="noreferrer" data-testid="button-whatsapp-direct">
                   <MessageSquare className="w-5 h-5 mr-2" />
                   Chat on WhatsApp
                 </a>
@@ -123,7 +140,12 @@ export default function Contact() {
           {/* Form */}
           <div className="lg:col-span-3">
             <div className="bg-card border border-border p-8 md:p-10 rounded-3xl shadow-xl">
-              <h3 className="text-2xl font-bold font-display mb-8">Book a Free Consultation</h3>
+              <div className="mb-8">
+                <h3 className="text-2xl font-bold font-display">Book a Free Consultation</h3>
+                <p className="text-muted-foreground text-sm mt-2">
+                  Fill in your details and click Send — we'll open WhatsApp with your message pre-filled so you can send it instantly.
+                </p>
+              </div>
 
               <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -135,7 +157,7 @@ export default function Contact() {
                         <FormItem>
                           <FormLabel>Full Name</FormLabel>
                           <FormControl>
-                            <Input placeholder="Your name" className="bg-background h-12" {...field} />
+                            <Input placeholder="Your name" className="bg-background h-12" data-testid="input-name" {...field} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -148,7 +170,7 @@ export default function Contact() {
                         <FormItem>
                           <FormLabel>Phone Number</FormLabel>
                           <FormControl>
-                            <Input placeholder="+91 XXXXX XXXXX" className="bg-background h-12" {...field} />
+                            <Input placeholder="+91 XXXXX XXXXX" className="bg-background h-12" data-testid="input-phone" {...field} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -163,7 +185,7 @@ export default function Contact() {
                       <FormItem>
                         <FormLabel>Email Address</FormLabel>
                         <FormControl>
-                          <Input placeholder="you@company.com" className="bg-background h-12" {...field} />
+                          <Input placeholder="you@company.com" className="bg-background h-12" data-testid="input-email" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -178,7 +200,7 @@ export default function Contact() {
                         <FormLabel>Service Interested In</FormLabel>
                         <Select onValueChange={field.onChange} defaultValue={field.value}>
                           <FormControl>
-                            <SelectTrigger className="bg-background h-12">
+                            <SelectTrigger className="bg-background h-12" data-testid="select-service">
                               <SelectValue placeholder="Select a service" />
                             </SelectTrigger>
                           </FormControl>
@@ -208,6 +230,7 @@ export default function Contact() {
                           <Textarea
                             placeholder="Tell us about your business and what you're looking to achieve..."
                             className="min-h-[120px] bg-background resize-none"
+                            data-testid="textarea-message"
                             {...field}
                           />
                         </FormControl>
@@ -216,8 +239,14 @@ export default function Contact() {
                     )}
                   />
 
-                  <Button type="submit" size="lg" className="w-full bg-accent hover:bg-accent/90 text-white h-14 text-base rounded-xl">
-                    Send Message
+                  <Button
+                    type="submit"
+                    size="lg"
+                    className="w-full bg-[#25D366] hover:bg-[#128C7E] text-white h-14 text-base rounded-xl flex items-center gap-2"
+                    data-testid="button-submit"
+                  >
+                    <MessageSquare className="w-5 h-5" />
+                    Send via WhatsApp
                   </Button>
                 </form>
               </Form>
