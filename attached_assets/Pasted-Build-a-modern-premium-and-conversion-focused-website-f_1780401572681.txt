@@ -1,0 +1,109 @@
+Build a modern, premium, and conversion-focused website for my digital agency.
+
+Agency Overview:
+We help local businesses, startups, service providers, and small-to-medium businesses establish a strong online presence. Our goal is to help businesses attract more customers, generate leads, and grow through technology.
+
+Services:
+
+* Custom Business Websites
+* E-commerce Websites
+* Web Applications
+* Mobile Applications (Android & iOS)
+* Website Redesign & Modernization
+* Business Automation Solutions
+* Landing Pages
+* SEO Optimization
+* Website Maintenance & Support
+* AI-Powered Business Solutions
+
+Target Audience:
+
+* Local businesses
+* Restaurants
+* Salons
+* Clinics
+* Real estate agencies
+* Startups
+* Educational institutes
+* Service providers
+* Small and medium enterprises
+
+Design Requirements:
+
+* Follow the attached PDF for design inspiration.
+* Keep all content in English.
+* Use modern animations and smooth transitions.
+* Premium startup-style design similar to top SaaS websites.
+* Mobile-first responsive design.
+* Clean typography.
+* Modern card layouts.
+* Professional illustrations and icons.
+* High-converting call-to-action sections.
+* Dark and light mode support.
+* Fast loading and SEO-friendly structure.
+
+Pages Required:
+
+1. Home Page
+
+* Hero section with strong headline
+* Agency introduction
+* Services overview
+* Why choose us
+* Process section
+* Portfolio showcase
+* Testimonials
+* FAQ
+* Contact CTA
+
+2. Services Page
+
+* Detailed service descriptions
+* Technologies used
+* Benefits for businesses
+
+3. Portfolio Page
+
+* Case studies
+* Website projects
+* Mobile app projects
+* Success metrics
+
+4. About Us Page
+
+* Founder story
+* Mission
+* Vision
+* Values
+
+5. Contact Page
+
+* Contact form
+* WhatsApp integration
+* Email contact
+* Book a consultation CTA
+
+Sections to Include:
+
+* "Bring Your Business Online"
+* "From Local Store to Digital Brand"
+* "Get More Customers with a Professional Website"
+* "Custom Solutions Built for Growth"
+
+Brand Personality:
+
+* Professional
+* Trustworthy
+* Innovative
+* Results-driven
+* Startup-friendly
+
+Tech Stack:
+
+* Next.js
+* TypeScript
+* Tailwind CSS
+* Framer Motion
+* Shadcn UI
+
+Generate a complete production-ready website with reusable components, modern UI patterns, responsive layouts, SEO optimization, and professional business content.

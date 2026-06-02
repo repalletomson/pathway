@@ -1,0 +1,26 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "ch2UWklHwcmCNxMbI6fV5"
+uri = "file://artifacts/aerukart/src/assets/images/hero-dashboard.png"
+type = "image"
+title = "Dark SaaS dashboard mockup"
+
+[[generated]]
+id = "8jpZEs6L-PBu2yegybzrF"
+uri = "file://artifacts/aerukart/src/assets/images/mobile-app.png"
+type = "image"
+title = "Mobile app design presentation"
+
+[[generated]]
+id = "L0pAYMtQwAXxVMR0mYEM-"
+uri = "file://artifacts/aerukart/src/assets/images/team.png"
+type = "image"
+title = "Agency team working"
+
+[[generated]]
+id = "wHeW9IEosp9ALnOWG9pHI"
+uri = "file://artifacts/aerukart/src/assets/images/restaurant-mockup.png"
+type = "image"
+title = "Restaurant website mockup"
