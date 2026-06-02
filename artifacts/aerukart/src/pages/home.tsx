@@ -5,6 +5,9 @@ import { Link } from "wouter";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import heroDashboard from "@/assets/images/hero-dashboard.png";
 import mobileApp from "@/assets/images/mobile-app.png";
+import ringendsolutionsImg from "@/assets/images/ringendsolutions.png";
+import studyforgeImg from "@/assets/images/studyforge.png";
+import socialzImg from "@/assets/images/socialz.png";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -188,6 +191,99 @@ export default function Home() {
                 <p className="text-muted-foreground">{s.desc}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Projects */}
+      <section className="py-24 md:py-32 bg-secondary/30">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+            <div>
+              <h2 className="text-3xl md:text-5xl font-display font-bold mb-4">Featured Projects</h2>
+              <p className="text-lg text-muted-foreground max-w-xl">A glimpse of what we've built for our clients — real products, real results.</p>
+            </div>
+            <Button asChild variant="outline" className="shrink-0 rounded-full px-6 border-border hover:border-accent hover:text-accent group" data-testid="button-view-all-projects">
+              <Link href="/portfolio">
+                View All Projects
+                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </Button>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Ringendsolutions",
+                category: "Website",
+                client: "Dubai Services Company",
+                image: ringendsolutionsImg,
+                link: "https://www.ringendsolutions.com/",
+                desc: "A sleek, professional services website for a Dubai-based multi-service company with clear service categorization and client inquiry flows.",
+              },
+              {
+                title: "StudyForge",
+                category: "Web App",
+                client: "EdTech Platform",
+                image: studyforgeImg,
+                link: "https://study-forge-gold.vercel.app/",
+                desc: "A headless education CMS with a visual program builder, chapter sequencing, and role-based access for instructors and admins.",
+              },
+              {
+                title: "Socialz",
+                category: "Mobile App",
+                client: "GenZ Social Platform",
+                image: socialzImg,
+                link: "https://play.google.com/store/apps/details?id=com.vinoothna.mycareerpath",
+                desc: "A GenZ-first social app for college students featuring interest-based chat, anonymous posting, and a streak-based spotlight system.",
+              },
+            ].map((project, i) => (
+              <motion.a
+                key={i}
+                href={project.link}
+                target="_blank"
+                rel="noreferrer"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                whileHover={{ y: -6 }}
+                className="group bg-card border border-border rounded-2xl overflow-hidden cursor-pointer hover:border-accent/50 transition-colors block"
+                data-testid={`card-project-${i}`}
+              >
+                <div className="relative overflow-hidden aspect-video">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-background/40 group-hover:bg-transparent transition-colors" />
+                  <div className="absolute top-4 left-4">
+                    <span className="bg-accent/90 text-white text-xs font-semibold px-3 py-1 rounded-full">{project.category}</span>
+                  </div>
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                    <div className="bg-white/10 backdrop-blur-sm border border-white/20 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-2">
+                      <ExternalLink className="w-3.5 h-3.5" />
+                      View Project
+                    </div>
+                  </div>
+                </div>
+                <div className="p-6">
+                  <div className="text-xs text-muted-foreground font-medium uppercase tracking-wider mb-2">{project.client}</div>
+                  <h3 className="text-xl font-bold font-display mb-3 group-hover:text-accent transition-colors">{project.title}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{project.desc}</p>
+                </div>
+              </motion.a>
+            ))}
+          </div>
+
+          <div className="mt-12 text-center">
+            <Button asChild size="lg" className="rounded-full px-8 bg-accent hover:bg-accent/90 text-white" data-testid="button-view-more-projects">
+              <Link href="/portfolio">
+                View More Projects
+                <ChevronRight className="ml-1 w-5 h-5" />
+              </Link>
+            </Button>
           </div>
         </div>
       </section>
