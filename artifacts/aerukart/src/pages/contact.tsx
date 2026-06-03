@@ -85,8 +85,8 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-semibold mb-1">Email Us</h4>
-                    <p className="text-muted-foreground">hello@pathway.studio</p>
-                    <p className="text-muted-foreground">support@pathway.studio</p>
+                    <p className="text-muted-foreground">yourpathwayonline@gmail.com</p>
+            
                   </div>
                 </div>
 
