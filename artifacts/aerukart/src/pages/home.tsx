@@ -295,20 +295,20 @@ export default function Home() {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              {
-                quote: "Pathway completely transformed our restaurant's online presence. We started getting consistent online reservations within the first few weeks.",
-                author: "Sarah Jenkins",
-                role: "Owner, The Rustic Table"
+{
+                quote: "Pathway built us a website that truly reflects the soul of our craft. Our furniture now gets the online attention it deserves and we've seen real inquiries come through.",
+                author: "Kotayya Reddy",
+                role: "Owner, Kotayya Carts"
               },
               {
-                quote: "We needed a complex web app built fast for our startup. The team at Pathway delivered a premium product ahead of schedule.",
-                author: "Marcus Chen",
-                role: "Founder, TechFlow"
+                quote: "We wanted an app that GenZ would actually use. Pathway nailed the vibe — Socialz crossed 100 downloads on the Play Store within weeks of going live.",
+                author: "Vinoothna V",
+                role: "Founder, Socialz"
               },
               {
-                quote: "Professional, sharp, and incredibly talented. They understood exactly what our clinic needed and executed it flawlessly.",
-                author: "Dr. Elena Rodriguez",
-                role: "Director, Apex Health"
+                quote: "After 20 years in construction, we finally have a website that shows the world what we've built. The response from new clients has been outstanding.",
+                author: "Anish K",
+                role: "Director, SK Builders"
               }
             ].map((t, i) => (
               <div key={i} className="bg-card p-8 rounded-2xl border border-border flex flex-col justify-between">
